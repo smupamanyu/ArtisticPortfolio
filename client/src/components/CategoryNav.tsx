@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { CategoryCard } from '@/components/ui/category-card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMusic, faFilm, faCode } from '@fortawesome/free-solid-svg-icons';
 
 const categoryData = [
   {
@@ -45,41 +47,46 @@ const item = {
 
 const CategoryNav = () => {
   return (
-    <section id="portfolio" className="py-20 mb-96 relative">
+    <div className="sticky top-24 z-30 bg-background/95 backdrop-blur-md py-6 border-b border-gray-800 shadow-lg">
       <div className="container mx-auto px-4">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-4xl font-playfair font-bold mb-4">Portfolio Categories</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">Explore my work across different creative domains</p>
-        </motion.div>
+        <h2 className="sr-only">Portfolio Categories</h2>
         
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 mb-48"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
+        <div className="flex flex-wrap justify-center gap-6">
           {categoryData.map((category) => (
-            <motion.div key={category.id} variants={item}>
-              <CategoryCard 
-                id={category.id}
-                title={category.title}
-                description={category.description}
-                imageUrl={category.imageUrl}
-                gradientFrom={category.gradientFrom}
-                gradientTo={category.gradientTo}
-              />
-            </motion.div>
+            <a 
+              key={category.id}
+              href={`#${category.id}`}
+              className="category-nav-link relative group"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById(category.id);
+                if (element) {
+                  const yOffset = -200;
+                  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({top: y, behavior: 'smooth'});
+                }
+              }}
+            >
+              <div className="flex flex-col items-center text-center transition-all duration-300 group-hover:-translate-y-1">
+                <div className={`w-16 h-16 mb-2 flex items-center justify-center rounded-full bg-gradient-to-br ${category.gradientFrom} ${category.gradientTo}`}>
+                  <span className="text-2xl text-white">
+                    {category.id === 'audio' && <FontAwesomeIcon icon={faMusic} />}
+                    {category.id === 'visual' && <FontAwesomeIcon icon={faFilm} />}
+                    {category.id === 'technical' && <FontAwesomeIcon icon={faCode} />}
+                  </span>
+                </div>
+                <h3 className="text-lg font-playfair">{category.title}</h3>
+                <p className="text-sm text-gray-400 max-w-[200px]">{category.description}</p>
+                <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
+                  category.id === 'audio' ? 'bg-primary' : 
+                  category.id === 'visual' ? 'bg-secondary' : 'bg-accent'
+                }`}></div>
+              </div>
+            </a>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

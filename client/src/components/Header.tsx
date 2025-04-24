@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +49,7 @@ const Header = () => {
           onClick={toggleMobileMenu}
           className="lg:hidden text-foreground focus:outline-none"
         >
-          <i className="fas fa-bars text-xl"></i>
+          <FontAwesomeIcon icon={faBars} className="text-xl" />
         </button>
         
         {/* Desktop navigation */}

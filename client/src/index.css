@@ -6,13 +6,13 @@
   :root {
     /* Light beige and vermillion theme */
     --background: 40 30% 95%; /* Light beige background */
-    --foreground: 15 15% 25%; /* Dark text for contrast */
+    --foreground: 15 85% 15%; /* Darker text for better contrast */
     
     --card: 40 30% 97%;
-    --card-foreground: 15 15% 25%;
+    --card-foreground: 15 85% 15%;
     
     --popover: 40 30% 97%;
-    --popover-foreground: 15 15% 25%;
+    --popover-foreground: 15 85% 15%;
     
     --primary: 10 85% 50%; /* Vermillion (reddish-orange) */
     --primary-foreground: 40 30% 98%;
@@ -39,13 +39,13 @@
   .light {
     /* Light mode - using the same beige and vermillion palette */
     --background: 40 30% 95%;
-    --foreground: 15 15% 25%;
+    --foreground: 15 85% 15%;
  
     --card: 40 30% 97%;
-    --card-foreground: 15 15% 25%;
+    --card-foreground: 15 85% 15%;
  
     --popover: 40 30% 97%;
-    --popover-foreground: 15 15% 25%;
+    --popover-foreground: 15 85% 15%;
  
     --primary: 10 85% 50%;
     --primary-foreground: 40 30% 98%;

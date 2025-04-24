@@ -76,7 +76,7 @@ const CategoryNav = () => {
                   </span>
                 </div>
                 <h3 className="text-lg font-playfair">{category.title}</h3>
-                <p className="text-sm text-gray-400 max-w-[200px]">{category.description}</p>
+                <p className="text-sm text-foreground/80 font-medium max-w-[200px]">{category.description}</p>
                 <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
                   category.id === 'audio' ? 'bg-primary' : 
                   category.id === 'visual' ? 'bg-secondary' : 'bg-accent'

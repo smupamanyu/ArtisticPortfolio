@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import BackgroundAudio from "@/components/BackgroundAudio";
+
+// Ambient background sound URL (royalty-free ambient sound)
+const AMBIENT_AUDIO_URL = "https://assets.mixkit.co/music/preview/mixkit-relaxed-ambience-loop-145.mp3";
 
 function Router() {
   return (
@@ -21,6 +25,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <BackgroundAudio audioSrc={AMBIENT_AUDIO_URL} volume={0.15} />
       </TooltipProvider>
     </QueryClientProvider>
   );

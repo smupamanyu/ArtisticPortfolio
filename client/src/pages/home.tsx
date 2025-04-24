@@ -36,8 +36,16 @@ const Home = () => {
         {/* Technical Section */}
         <TechnicalSection />
         
+        <div className="container mx-auto px-4">
+          <div className="section-divider"></div>
+        </div>
+        
         {/* About Section */}
         <AboutSection />
+        
+        <div className="container mx-auto px-4">
+          <div className="section-divider"></div>
+        </div>
         
         {/* Contact Section */}
         <ContactSection />

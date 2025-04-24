@@ -73,6 +73,7 @@
   
   html {
     @apply scroll-smooth;
+    scroll-padding-top: 100px; /* Adds padding for anchor navigation */
   }
   
   body {
@@ -145,6 +146,14 @@
 
 .portfolio-item:hover {
   transform: translateY(-5px);
+}
+
+/* Section dividers */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(var(--primary), 0.5), transparent);
+  margin: 2rem 0;
+  width: 100%;
 }
 
 /* Custom scrollbar */

@@ -45,7 +45,7 @@ const item = {
 
 const CategoryNav = () => {
   return (
-    <section id="portfolio" className="py-20 relative">
+    <section id="portfolio" className="py-20 pb-40 relative">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -59,7 +59,7 @@ const CategoryNav = () => {
         </motion.div>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10"
           variants={container}
           initial="hidden"
           whileInView="show"

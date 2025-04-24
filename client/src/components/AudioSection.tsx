@@ -25,7 +25,7 @@ const AudioSection = () => {
   ];
 
   return (
-    <section id="audio" className="py-20 relative">
+    <section id="audio" className="py-20 pt-40 relative">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center mb-16">
           <motion.div 

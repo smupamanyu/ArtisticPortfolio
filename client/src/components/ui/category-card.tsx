@@ -18,7 +18,20 @@ export const CategoryCard = ({
   gradientTo,
 }: CategoryCardProps) => {
   return (
-    <a href={`#${id}`} className="category-card group relative overflow-hidden rounded-xl h-80">
+    <a 
+      href={`#${id}`} 
+      className="category-card group relative overflow-hidden rounded-xl h-80"
+      onClick={(e) => {
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+          // Smooth scroll with offset
+          const yOffset = -100; // Adjust based on header height and desired padding
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({top: y, behavior: 'smooth'});
+        }
+      }}
+    >
       <div className={`absolute inset-0 bg-gradient-to-br ${gradientFrom} ${gradientTo} opacity-90 group-hover:opacity-100 transition-opacity duration-300`}></div>
       <img 
         src={imageUrl}

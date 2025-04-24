@@ -57,6 +57,16 @@ const Header = () => {
               key={index}
               href={item.href} 
               className="text-foreground hover:text-primary transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                const id = item.href.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) {
+                  const yOffset = -100;
+                  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({top: y, behavior: 'smooth'});
+                }
+              }}
             >
               {item.label}
             </a>
@@ -80,7 +90,17 @@ const Header = () => {
                   key={index}
                   href={item.href} 
                   className="text-foreground hover:text-primary transition-colors duration-300 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    const id = item.href.replace('#', '');
+                    const element = document.getElementById(id);
+                    if (element) {
+                      const yOffset = -100;
+                      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({top: y, behavior: 'smooth'});
+                    }
+                  }}
                 >
                   {item.label}
                 </a>

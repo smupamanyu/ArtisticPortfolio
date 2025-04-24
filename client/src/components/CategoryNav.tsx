@@ -47,7 +47,7 @@ const item = {
 
 const CategoryNav = () => {
   return (
-    <div className="sticky top-24 z-30 bg-background/95 backdrop-blur-md py-6 border-b border-gray-800 shadow-lg">
+    <div className="relative z-20 bg-background/95 backdrop-blur-md py-6 border-b border-gray-800 shadow-lg">
       <div className="container mx-auto px-4">
         <h2 className="sr-only">Portfolio Categories</h2>
         

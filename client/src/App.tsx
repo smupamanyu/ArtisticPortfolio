@@ -8,7 +8,8 @@ import NotFound from "@/pages/not-found";
 import BackgroundAudio from "@/components/BackgroundAudio";
 
 // Ambient background sound URL (royalty-free ambient sound)
-const AMBIENT_AUDIO_URL = "https://assets.mixkit.co/music/preview/mixkit-relaxed-ambience-loop-145.mp3";
+// Using a reliable URL from SoundHelix for better browser compatibility
+const AMBIENT_AUDIO_URL = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
 
 function Router() {
   return (

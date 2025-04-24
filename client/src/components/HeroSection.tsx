@@ -24,7 +24,7 @@ const HeroSection = () => {
               <span className="block">Creative</span>
               <span className="text-primary">Portfolio</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-xl">
+            <p className="text-xl text-gray-800 font-medium max-w-xl">
               Exploring the intersection of audio, visual, and technical artistry through immersive digital experiences.
             </p>
             <div className="flex space-x-4 pt-6">

@@ -27,6 +27,10 @@ const Home = () => {
         {/* Portfolio Categories */}
         <CategoryNav />
         
+        <div className="container mx-auto px-4 -mb-20">
+          <div className="section-divider"></div>
+        </div>
+        
         {/* Audio Section */}
         <AudioSection />
         

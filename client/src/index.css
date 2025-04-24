@@ -73,7 +73,7 @@
   
   html {
     @apply scroll-smooth;
-    scroll-padding-top: 100px; /* Adds padding for anchor navigation */
+    scroll-padding-top: 150px; /* Adds padding for anchor navigation */
   }
   
   body {

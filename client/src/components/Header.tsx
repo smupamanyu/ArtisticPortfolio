@@ -62,7 +62,7 @@ const Header = () => {
                 const id = item.href.replace('#', '');
                 const element = document.getElementById(id);
                 if (element) {
-                  const yOffset = -100;
+                  const yOffset = -150;
                   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                   window.scrollTo({top: y, behavior: 'smooth'});
                 }
@@ -96,7 +96,7 @@ const Header = () => {
                     const id = item.href.replace('#', '');
                     const element = document.getElementById(id);
                     if (element) {
-                      const yOffset = -100;
+                      const yOffset = -150;
                       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                       window.scrollTo({top: y, behavior: 'smooth'});
                     }
